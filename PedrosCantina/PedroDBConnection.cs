@@ -12,7 +12,8 @@ namespace PedrosCantina
     {
         SqlConnection _connection;
 
-        private string _connectionString;
+        //readonly gør, at vi ikke kan sætte _connectionString, efter vi har oprettet den som variabel?
+        private readonly string _connectionString;
 
       
 
