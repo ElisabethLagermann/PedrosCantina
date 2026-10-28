@@ -32,21 +32,25 @@ namespace PedrosCantina
 
         public PedroDBConnection(string connectionString)
         {
-            ConnectionString = connectionString;
+            _connectionString = connectionString;
         }
 
 
-        public string ConnectionString
-        {
-            get { return _connectionString; }
-            set { _connectionString = value; }
-        }
+        //Efter rettelser fra underviser, sletter jeg denne property, da den ikke skal anvendes i programmet. Ellers kan folk udefra få adgang til connection string'en og sætte den på ny.
 
-        
+        //public string ConnectionString
+        //{
+        //    get { return _connectionString; }
+        //    set { _connectionString = value; }
+        //}
+
+
         public SqlConnection Connection
         {
             get { return _connection; }
-            set { _connection = value; }
+
+            //Ingen skal kunne sætte Connection'en, kun gette den.
+            //set { _connection = value; }
         }
 
 
